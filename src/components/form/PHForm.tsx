@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 import {
   FieldValues,
   FormProvider,
   SubmitHandler,
   useForm,
-} from 'react-hook-form';
+} from "react-hook-form";
 
 type TFormConfig = {
   defaultValues?: Record<string, any>;
@@ -17,9 +17,10 @@ type TFormProps = {
 
 const PHForm = ({ onSubmit, children, defaultValues }: TFormProps) => {
   const formConfig: TFormConfig = {};
+  // config
 
   if (defaultValues) {
-    formConfig['defaultValues'] = defaultValues;
+    formConfig["defaultValues"] = defaultValues;
   }
 
   const methods = useForm(formConfig);
